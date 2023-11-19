@@ -40,6 +40,7 @@ python main.py
 python test.py
 ```
 
+**Note: Due to Pytorch built-in TransformerEncoderLayer does not output attention matrix by default, you should make some changes, please refer to [GCFAgg](https://github.com/Galaxy922/GCFAggMVC/blob/main/Obtain%20-S.docx).**
 
 ### Acknowledgments
 
