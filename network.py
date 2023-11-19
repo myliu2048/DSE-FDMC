@@ -68,7 +68,7 @@ class Model(nn.Module):
             nn.Linear(low_feature_dim * view, high_feature_dim)
         )
 
-        self.pseudo_clustering_layer = nn.Sequential(
+        self.clustering_layer = nn.Sequential(
             nn.Linear(high_feature_dim, args.class_num),
             nn.Softmax(dim=1)
         )
@@ -90,5 +90,5 @@ class Model(nn.Module):
         fusedZ = fusedZ.squeeze(1)  
         S = S.squeeze(0)  
         Hhat = F.normalize(self.Common_view(fusedZ), dim=1)
-        p = self.pseudo_clustering_layer(Hhat)
+        p = self.clustering_layer(Hhat)
         return Hhat, S, xrs, zs, hs, catZ, fusedZ, p
