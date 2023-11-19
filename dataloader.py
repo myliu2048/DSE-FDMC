@@ -20,26 +20,6 @@ class MNIST_USPS(Dataset):
         x2 = self.V2[idx].reshape(784)
         return [torch.from_numpy(x1), torch.from_numpy(x2)], self.Y[idx], torch.from_numpy(np.array(idx)).long()
 
-
-class Fashion(Dataset):
-    def __init__(self, path):
-        self.Y = scipy.io.loadmat(path + 'Fashion.mat')['Y'].astype(np.int32).reshape(10000,)
-        self.V1 = scipy.io.loadmat(path + 'Fashion.mat')['X1'].astype(np.float32)
-        self.V2 = scipy.io.loadmat(path + 'Fashion.mat')['X2'].astype(np.float32)
-        self.V3 = scipy.io.loadmat(path + 'Fashion.mat')['X3'].astype(np.float32)
-
-    def __len__(self):
-        return 10000
-
-    def __getitem__(self, idx):
-
-        x1 = self.V1[idx].reshape(784)
-        x2 = self.V2[idx].reshape(784)
-        x3 = self.V3[idx].reshape(784)
-
-        return [torch.from_numpy(x1), torch.from_numpy(x2), torch.from_numpy(x3)], self.Y[idx], torch.from_numpy(np.array(idx)).long()
-
-
 class Caltech(Dataset):
     def __init__(self, path, view):
         data = scipy.io.loadmat(path)
@@ -110,12 +90,6 @@ def load_data(dataset):
         view = 2
         class_num = 10
         data_size = 5000
-    elif dataset == "Fashion":
-        dataset = Fashion('data/')
-        dims = [784, 784, 784]
-        view = 3
-        data_size = 10000
-        class_num = 10
     elif dataset == "Caltech-3V":
         dataset = Caltech('data/Caltech-5V.mat', view=3)
         dims = [40, 254, 928]
