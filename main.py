@@ -143,6 +143,6 @@ def main():
 if __name__ == '__main__':
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     datalist = ['Caltech-3V','Caltech-4V','Caltech-5V','MNIST_USPS','Prokaryotic','Hdigit']
-    data = datalist[1]
+    data = datalist[3]
     args = config(data)
     main()
