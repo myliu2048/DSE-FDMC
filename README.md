@@ -29,7 +29,7 @@ MNIST_USPS and Hdigit are placed in "data" folder, Prokaryotic and Caltech can b
 ### Usage
 
 
-- To train a new model, run:
+- To train the network and save model, run:
 
 ```bash
 python main.py
