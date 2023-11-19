@@ -86,7 +86,7 @@ class Model(nn.Module):
         catZ = torch.cat(zs, 1)
         catZ = F.normalize(catZ, dim=1)
         fusedZ = catZ.unsqueeze(1)  
-        fusedZ, S = self.TEL(fusedZ)  
+        fusedZ, S = self.TEL(fusedZ)  # built-in TransformerEncoderLayer doesn't output S by default.
         fusedZ = fusedZ.squeeze(1)  
         S = S.squeeze(0)  
         Hhat = F.normalize(self.Common_view(fusedZ), dim=1)
