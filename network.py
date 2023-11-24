@@ -19,7 +19,8 @@ class Encoder(nn.Module):
             nn.BatchNorm1d(1024),
             nn.ReLU(True), 
             nn.Dropout(0.2),
-            nn.Linear(1024, feature_dim), nn.BatchNorm1d(feature_dim),
+            nn.Linear(1024, feature_dim), 
+            nn.BatchNorm1d(feature_dim),
             nn.ReLU(True)
         )
 
