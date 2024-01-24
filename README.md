@@ -1,4 +1,4 @@
-## Progressive Contrastive Learning for Fusion-style Deep Multi-view Clustering
+## Progressive Neighbor-masked Contrastive Learning for Fusion-style Deep Multi-view Clustering
  
 <!-- ### Authors -->
 <!-- Minyang Liu, Zuyuan Yang, Zhenni Li, Shengli Xie -->
