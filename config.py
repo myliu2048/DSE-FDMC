@@ -44,6 +44,13 @@ def config(data='Caltech-3V'):
         args.view = 2
         args.temperature_H = 0.1  
         args.lam1 = 0.1
+        
+    if args.dataset == "YouTubeFace":
+        args.dims = [64, 512, 64, 647, 838]
+        args.class_num = 31
+        args.seed = 10
+        args.view = 5        
+        
     # ======================================
     if args.dataset == "Caltech-5V":
         args.dims = [40, 254, 928, 512, 1984]
@@ -62,5 +69,11 @@ def config(data='Caltech-3V'):
         args.view = 3
         args.class_num = 7
         args.seed = 1
+        
+    if args.dataset == "Caltech-2V":
+        args.dims = [40, 254]
+        args.view = 2
+        args.class_num = 7
+        args.seed = 10
       
     return args

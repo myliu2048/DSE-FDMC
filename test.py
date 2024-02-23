@@ -17,8 +17,8 @@ def setup_seed(seed):
     torch.cuda.manual_seed_all(seed) 
     torch.backends.cudnn.deterministic = True 
 
-datalist = ['Caltech-3V','Caltech-4V','Caltech-5V','MNIST_USPS','Prokaryotic','Hdigit']
-data = datalist[3]
+datalist = ['Caltech-2V', 'Caltech-3V','Caltech-4V','Caltech-5V','MNIST_USPS','Prokaryotic','Hdigit','YouTubeFace']
+data = datalist[1]
 args = config(data)
 
 setup_seed(args.seed)
