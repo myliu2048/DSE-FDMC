@@ -12,7 +12,7 @@ scikit-learn==0.23.2
 
 ### Datasets
 
-MNIST_USPS and Hdigit are placed in "data" folder, Prokaryotic, Caltech-5V, and YouTubeFace can be downloaded from [dropbox](https://www.dropbox.com/scl/fi/shv57hvaq1xo7teurt6xh/data.zip?rlkey=lo05a9iegemt9tuhpe5osj1du&dl=0), unzip all the data, put in 'data/' folder.
+MNIST_USPS and Hdigit are placed in "data" folder, Prokaryotic, Caltech-5V, and YouTubeFace can be downloaded from [dropbox](https://www.dropbox.com/scl/fi/zszlubwqwfsnizt6bor62/data.zip?rlkey=jmd4l284otv4raf4zuzvpwbsg&dl=0), unzip all the data, put in 'data/' folder.
 
 ### Usage
 
@@ -23,7 +23,7 @@ MNIST_USPS and Hdigit are placed in "data" folder, Prokaryotic, Caltech-5V, and 
 python main.py
 ```
 
-- To test the trained model, download the trained models from [dropbox](https://www.dropbox.com/scl/fi/dn69vhun6rnfu9xieto2e/models.zip?rlkey=t7lxliqobh145i43n4jpnkd5k&dl=0), and unzip all the model named by corresponding data, put in 'models/' folder, and run: 
+- To test the trained model, download the trained models from [dropbox](https://www.dropbox.com/scl/fi/4d94u1qlz32kxb7s2it7r/models.zip?rlkey=xyikbkzilfzovi9cy28ber58a&dl=0), and unzip all the model named by corresponding data, put in 'models/' folder, and run: 
 ```bash
 python test.py
 ```
